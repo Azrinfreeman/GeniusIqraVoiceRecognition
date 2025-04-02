@@ -1,0 +1,15 @@
+Quick Notes!
+
+Version 2.0.5 onwards you will noticed that all of our unity codes used a namespace
+which will break your codes but this is super easy to fix you just need to import
+the plugin that you are currently using, so be aware that this will happen and please
+don't panic!
+
+Quick Fix delete everything amd Update, Download and Reimport our plugin!!!
+
+our plugin folder name has changed, you must delete everything and reimport our plugin if 
+you got an existing Android Ultimate Plugin
+Assets/Plugins/Android/aup.androidlib
+
+PLease read this for more information
+https://docs.google.com/document/d/1Z1XU13mfX3yRaZQACsAMXgijJYAtKvYxuTfRqIzBrOY/edit?usp=sharing

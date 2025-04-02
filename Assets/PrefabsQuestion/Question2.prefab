@@ -1,0 +1,876 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3514018564511713805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6727810906343781031}
+  - component: {fileID: 2747872098030377206}
+  - component: {fileID: 8197514237116540113}
+  m_Layer: 5
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &6727810906343781031
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514018564511713805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5286398475341700399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 73.99985}
+  m_SizeDelta: {x: 121.082, y: 195.8013}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &2747872098030377206
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514018564511713805}
+  m_CullTransparentMesh: 1
+--- !u!114 &8197514237116540113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514018564511713805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1310208992, guid: 776c093a334cfb3a599857092b0f265e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4003318381739941875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7717824487557849749}
+  - component: {fileID: 5285175669421449371}
+  m_Layer: 5
+  m_Name: Question2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7717824487557849749
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003318381739941875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5286398475341700399}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1538, y: 787.06006}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &5285175669421449371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003318381739941875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53665bd93397abd0cae798e1df956dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonNext: {fileID: 0}
+  numQuestion: 0
+  numCount: 0
+  questionLists:
+  - name: ba<color="red">ju
+    compare:
+    - bad you
+    - bag you
+    - baju.
+    - Baju.
+    - Bayou
+    level: 2
+  - name: bi<color="red">ru
+    compare:
+    - be too
+    - the rule
+    - be ruled
+    - Biru.
+    - biru
+    - biru.
+    - Beru
+    - Buru
+    - biru
+    level: 2
+  - name: bu<color="red">ku
+    compare:
+    - boko
+    - boo cool
+    - boo goo
+    - who who
+    - Buku
+    - buku
+    level: 2
+  - name: ca<color="red">wan
+    compare:
+    - jai like
+    - jai white
+    - ah one
+    - caroline
+    - one
+    - when
+    - Jawaan
+    - Jawan
+    - cawan
+    level: 2
+  - name: ci<color="red">li
+    compare:
+    - jeannie
+    - je ne
+    - je li
+    - Tili
+    - Cili.
+    - Cili
+    level: 2
+  - name: cu<color="red">ka
+    compare:
+    - joker
+    - too good
+    - chuka
+    - to got
+    - to got
+    - Juga
+    - Juka
+    - cuka
+    level: 2
+  - name: da<color="red">du
+    compare:
+    - di do
+    - yeah i do
+    - dad to
+    - dadu
+    level: 2
+  - name: di<color="red">am
+    compare:
+    - the am
+    - the i'm
+    - diam
+    level: 2
+  - name: du<color="red">ri
+    compare:
+    - during
+    - duty
+    - judy
+    - do already
+    - doit he
+    - duri
+    level: 2
+  - name: fa<color="red">kir
+    compare:
+    - fact air
+    - faq care
+    - faq a
+    - fakir
+    level: 3
+  - name: fi<color="red">lem
+    compare:
+    - see them
+    - the lem
+    - filem
+    level: 2
+  - name: fu<color="red">cuk
+    compare:
+    - food you
+    - food too
+    - food to
+    - pucuk
+    - fucuk
+    level: 2
+  - name: ga<color="red">jah
+    compare:
+    - god yeah
+    - yeah
+    - gajah
+    level: 2
+  - name: gi<color="red">gi
+    compare:
+    - de gea
+    - gee d
+    - gigi
+    - giggling
+    level: 2
+  - name: gu<color="red">li
+    compare:
+    - really
+    - guti
+    - gurley
+    - goalie
+    - guli
+    level: 2
+  - name: ha<color="red">ji
+    compare:
+    - hygiene
+    - hagee
+    - hajime
+    - haji
+    level: 2
+  - name: hi<color="red">jau
+    compare:
+    - he down
+    - the go
+    - he go
+    - hijau
+    level: 2
+  - name: hu<color="red">jan
+    compare:
+    - who jen
+    - who again
+    - hujan
+    level: 2
+  - name: ja<color="red">la
+    compare:
+    - dahlia
+    - janet
+    - dial it
+    - janet
+    - jala
+    level: 2
+  - name: ji<color="red">ran
+    compare:
+    - good right
+    - good i
+    - gee run
+    - gee right
+    - jiran
+    level: 2
+  - name: ju<color="red">bah
+    compare:
+    - dubai
+    - do but
+    - jubah
+    level: 2
+  - name: ka<color="red">sut
+    compare:
+    - cause
+    - gosh
+    - pass it
+    - pass a
+    - gas it
+    - guy so
+    - kasut
+    level: 2
+  - name: ki<color="red">pas
+    compare:
+    - keep us
+    - yeah so
+    - kipas
+    level: 2
+  - name: ku<color="red">lat
+    compare:
+    - cool at
+    - cooler
+    - cool
+    - kulat
+    level: 2
+  - name: la<color="red">bu
+    compare:
+    - lab who
+    - lab or
+    - labu
+    level: 2
+  - name: li<color="red">di
+    compare:
+    - needy
+    - lady
+    - lady
+    - lidi
+    level: 2
+  - name: lu<color="red">ka
+    compare:
+    - no could
+    - no good
+    - luca
+    - luka
+    level: 2
+  - name: ma<color="red">ta
+    compare:
+    - matter
+    - my dad
+    - mad there
+    - matt their matter
+    - two blogger
+    - mata
+    level: 2
+  - name: mi<color="red">sai
+    compare:
+    - nice i
+    - nice side
+    - me hey
+    - more say
+    - misai
+    level: 2
+  - name: mu<color="red">ka
+    compare:
+    - milk
+    - mocha
+    - motor
+    - muka
+    level: 2
+  - name: na<color="red">si
+    compare:
+    - lassie
+    - nasty
+    - now see nancy
+    - nancy
+    - now see
+    - nice you
+    - nasi
+    level: 2
+  - name: ni<color="red">la
+    compare:
+    - mean it
+    - neely
+    - neither
+    - here
+    - neil here
+    - nila
+    level: 2
+  - name: nu<color="red">ri
+    compare:
+    - nobody
+    - naughty
+    - no three
+    - nori
+    - nuri
+    level: 2
+  - name: pa<color="red">di
+    compare:
+    - body
+    - party
+    - padi
+    level: 2
+  - name: pi<color="red">pi
+    compare:
+    - bp
+    - pp
+    - he be
+    - baby
+    - b b
+    - pipi
+    level: 2
+  - name: pu<color="red">kat
+    compare:
+    - pocket
+    - look at
+    - pukat
+    level: 2
+  - name: qa<color="red">ri
+    compare:
+    - cardi
+    - cause you
+    - corey
+    - kari
+    - qari
+    level: 2
+  - name: qi<color="red">am
+    compare:
+    - tm
+    - t m
+    - pm
+    - key i'm
+    - he am
+    - kim
+    - kiam
+    - qiam
+    level: 2
+  - name: qu<color="red">ran
+    compare:
+    - quarters and
+    - quran
+    - koran
+    - quran
+    - kuran
+    level: 2
+  - name: ra<color="red">sa
+    compare:
+    - raza
+    - russia
+    - and i said
+    - rasa
+    level: 2
+  - name: ri<color="red">ba
+    compare:
+    - read by
+    - reboot
+    - reebok
+    - the by
+    - the bar
+    - rasa
+    level: 2
+  - name: ru<color="red">mah
+    compare:
+    - aroma
+    - roma
+    - room
+    - room ah
+    - rumah
+    level: 2
+  - name: sa<color="red">tu
+    compare:
+    - say too
+    - say two
+    - sad to
+    - sad too
+    - sad door
+    - satu
+    level: 2
+  - name: si<color="red">ku
+    compare:
+    - see to
+    - see cool
+    - siegel
+    - siku
+    level: 2
+  - name: su<color="red">du
+    compare:
+    - so do
+    - soo do
+    - sudu
+    level: 2
+  - name: ta<color="red">yar
+    compare:
+    - by out of
+    - by are
+    - by our
+    - diane
+    - diameter
+    - tayar
+    level: 2
+  - name: ti<color="red">ti
+    compare:
+    - dt
+    - dp
+    - tt
+    - debut
+    - the be
+    - dd
+    - titi
+    level: 2
+  - name: tu<color="red">kul
+    compare:
+    - to could
+    - to good
+    - too cool
+    - two point
+    - dual coil
+    - tukul
+    level: 2
+  - name: wau
+    compare:
+    - wow
+    - wau
+    level: 2
+  - name: wi<color="red">sel
+    compare:
+    - we say
+    - we seem to
+    - we sell
+    - wisel
+    level: 2
+  - name: wu<color="red">duk
+    compare:
+    - who do
+    - would
+    - we would
+    - wuduk
+    level: 2
+  - name: yak
+    compare:
+    - yeah
+    - yak
+    level: 2
+  - name: yis
+    compare:
+    - nice
+    - yes
+    - this
+    - yis
+    level: 2
+  - name: yu
+    compare:
+    - you
+    - yu
+    - u
+    level: 2
+  - name: za<color="red">ki
+    compare:
+    - zach to
+    - zach de
+    - zach team
+    - zaki
+    - the key
+    - that key
+    - zaki
+    level: 2
+  - name: zi<color="red">ra<color="yellow">fah
+    compare:
+    - zhuhai
+    - zoo hi
+    - zoo hadn't
+    - zoo hey
+    - zero five
+    - the raf
+    - the refer
+    - zero far
+    - the eat of
+    - the rapper
+    - zirafah
+    level: 2
+  - name: zu<color="red">hal
+    compare:
+    - he do high
+    - he do hi
+    - zoo hell
+    - zoo hi
+    - zoo hey
+    - zoo hey
+    - you have
+    - zuhal
+    level: 2
+  questionList: []
+  comparingString: []
+  questionLabel: {fileID: 0}
+  questionImage: []
+--- !u!1 &4905063647451080099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6134505644575582674}
+  - component: {fileID: 8034807650314654546}
+  - component: {fileID: 2260144474864197548}
+  m_Layer: 5
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &6134505644575582674
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905063647451080099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5286398475341700399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 73.99985}
+  m_SizeDelta: {x: 121.082, y: 195.8013}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &8034807650314654546
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905063647451080099}
+  m_CullTransparentMesh: 1
+--- !u!114 &2260144474864197548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905063647451080099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2067891846, guid: 776c093a334cfb3a599857092b0f265e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6502733727325979217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4854514884552071720}
+  - component: {fileID: 1894552012892004630}
+  - component: {fileID: 3357727785588922240}
+  m_Layer: 5
+  m_Name: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4854514884552071720
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502733727325979217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5286398475341700399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 74}
+  m_SizeDelta: {x: 121.082, y: 195.8013}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &1894552012892004630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502733727325979217}
+  m_CullTransparentMesh: 1
+--- !u!114 &3357727785588922240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502733727325979217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1368235126, guid: 776c093a334cfb3a599857092b0f265e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6705021934703436306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5286398475341700399}
+  - component: {fileID: 3098416465435561444}
+  - component: {fileID: 6126305224146545742}
+  m_Layer: 5
+  m_Name: textArab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5286398475341700399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705021934703436306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4854514884552071720}
+  - {fileID: 6134505644575582674}
+  - {fileID: 6727810906343781031}
+  m_Father: {fileID: 7717824487557849749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 96}
+  m_SizeDelta: {x: -469.3143, y: -366.0652}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3098416465435561444
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705021934703436306}
+  m_CullTransparentMesh: 1
+--- !u!114 &6126305224146545742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705021934703436306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: CONTOH SOALAN
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 200
+  m_fontSizeBase: 200
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
