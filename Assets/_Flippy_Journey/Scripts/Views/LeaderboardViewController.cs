@@ -1,29 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Text.RegularExpressions;
-using System.Linq;
 
 namespace ClawbearGames
 {
     public class LeaderboardViewController : BaseViewController
     {
-        [SerializeField] private CanvasGroup canvasGroup = null;
-        [SerializeField] private RectTransform servicesUnavailablePanelTrans = null;
-        [SerializeField] private RectTransform setUsernamePanelTrans = null;
-        [SerializeField] private RectTransform leaderboardPanelTrans = null;
-        [SerializeField] private RectTransform contentTrans = null;
-        [SerializeField] private InputField usernameInputField = null;
-        [SerializeField] private Text localUsernameText = null;
-        [SerializeField] private Text usernameErrorText = null;
-        [SerializeField] private LeaderboardItemController leaderboardItemControllerPrefab = null;
+        [SerializeField]
+        private CanvasGroup canvasGroup = null;
 
+        [SerializeField]
+        private RectTransform servicesUnavailablePanelTrans = null;
 
-        private List<LeaderboardItemController> listLeaderboardItemController = new List<LeaderboardItemController>();
+        [SerializeField]
+        private RectTransform setUsernamePanelTrans = null;
 
+        [SerializeField]
+        private RectTransform leaderboardPanelTrans = null;
 
+        [SerializeField]
+        private RectTransform contentTrans = null;
 
+        [SerializeField]
+        private InputField usernameInputField = null;
+
+        [SerializeField]
+        private Text localUsernameText = null;
+
+        [SerializeField]
+        private Text usernameErrorText = null;
+
+        [SerializeField]
+        private LeaderboardItemController leaderboardItemControllerPrefab = null;
+
+        private List<LeaderboardItemController> listLeaderboardItemController =
+            new List<LeaderboardItemController>();
 
         /// <summary>
         /// Get an inactive LeaderboardItemController object.
@@ -32,20 +46,24 @@ namespace ClawbearGames
         private LeaderboardItemController GetLeaderboardItemController()
         {
             //Find in the list
-            LeaderboardItemController item = listLeaderboardItemController.Where(a => !a.gameObject.activeInHierarchy).FirstOrDefault();
+            LeaderboardItemController item = listLeaderboardItemController
+                .Where(a => !a.gameObject.activeInHierarchy)
+                .FirstOrDefault();
 
             if (item == null)
             {
                 //Didn't find one -> create new one
-                item = Instantiate(leaderboardItemControllerPrefab, Vector3.zero, Quaternion.identity);
+                item = Instantiate(
+                    leaderboardItemControllerPrefab,
+                    Vector3.zero,
+                    Quaternion.identity
+                );
                 item.gameObject.SetActive(false);
                 listLeaderboardItemController.Add(item);
             }
 
             return item;
         }
-
-
 
         /// <summary>
         /// Coroutine create the leaderboard items.
@@ -64,15 +82,18 @@ namespace ClawbearGames
                 itemController.OnSetup(i + 1, listPlayerData[i]);
 
                 //Set local user
-                if (listPlayerData[i].Username.Equals(PlayerPrefs.GetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME)))
+                if (
+                    listPlayerData[i]
+                        .Username.Equals(PlayerPrefs.GetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME))
+                )
                 {
-                    localUsernameText.text = "#" + (i + 1).ToString() + "." + " " + listPlayerData[i].Username;
+                    localUsernameText.text =
+                        "#" + (i + 1).ToString() + "." + " " + listPlayerData[i].Username;
                 }
 
                 yield return new WaitForSeconds(0.05f);
             }
         }
-
 
         /// <summary>
         ////////////////////////////////////////////////// Public Functions
@@ -95,28 +116,33 @@ namespace ClawbearGames
             else
             {
                 //User name already been set up.
-                localUsernameText.text = "#. " + PlayerPrefs.GetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME);
+                localUsernameText.text =
+                    "#. " + PlayerPrefs.GetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME);
 
                 //Check connect to Dreamlo services
-                ServicesManager.Instance.LeaderboardManager.CheckConnectedToDreamloServices((isConnected) =>
-                {
-                    if (isConnected)
+                ServicesManager.Instance.LeaderboardManager.CheckConnectedToDreamloServices(
+                    (isConnected) =>
                     {
-                        //Connected to Dreamlo services -> show leaderboard
-                        leaderboardPanelTrans.gameObject.SetActive(true);
-
-                        //Create items and set data for local player.
-                        ServicesManager.Instance.LeaderboardManager.GetPlayerLeaderboardData((playerDatas) =>
+                        if (isConnected)
                         {
-                            StartCoroutine(CRCreateLeaderboardItems(playerDatas));
-                        });
+                            //Connected to Dreamlo services -> show leaderboard
+                            leaderboardPanelTrans.gameObject.SetActive(true);
+
+                            //Create items and set data for local player.
+                            ServicesManager.Instance.LeaderboardManager.GetPlayerLeaderboardData(
+                                (playerDatas) =>
+                                {
+                                    StartCoroutine(CRCreateLeaderboardItems(playerDatas));
+                                }
+                            );
+                        }
+                        else
+                        {
+                            //Not connect to Dreamlo services -> show servicesUnavailableView
+                            servicesUnavailablePanelTrans.gameObject.SetActive(true);
+                        }
                     }
-                    else
-                    {
-                        //Not connect to Dreamlo services -> show servicesUnavailableView
-                        servicesUnavailablePanelTrans.gameObject.SetActive(true);
-                    }
-                });
+                );
             }
         }
 
@@ -130,7 +156,6 @@ namespace ClawbearGames
             gameObject.SetActive(false);
         }
 
-
         /// <summary>
         ////////////////////////////////////////////////// UI Buttons
         /// </summary>
@@ -139,7 +164,9 @@ namespace ClawbearGames
 
         public void OnClickConfirmButton()
         {
-            ServicesManager.Instance.SoundManager.PlaySound(ServicesManager.Instance.SoundManager.Button);
+            ServicesManager.Instance.SoundManager.PlaySound(
+                ServicesManager.Instance.SoundManager.Button
+            );
             usernameErrorText.gameObject.SetActive(false);
 
             Regex regex = new Regex(@"^[A-z][A-z|\.|\s]+$");
@@ -151,55 +178,71 @@ namespace ClawbearGames
             else //Username passed the regex check
             {
                 //Check connect to Dreamlo services
-                ServicesManager.Instance.LeaderboardManager.CheckConnectedToDreamloServices((isConnected) =>
-                {
-                    if (isConnected)
+                ServicesManager.Instance.LeaderboardManager.CheckConnectedToDreamloServices(
+                    (isConnected) =>
                     {
-                        //Connected to Dreamlo services -> check username exists
-                        string username = usernameInputField.text.Trim();
-                        usernameInputField.text = username;
-                        ServicesManager.Instance.LeaderboardManager.CheckUsernameExists(username, (isExists) =>
+                        if (isConnected)
                         {
-                            if (isExists)
-                            {
-                                //Username already exists
-                                usernameErrorText.gameObject.SetActive(true);
-                                usernameErrorText.text = "The Username Already Exists !";
-                            }
-                            else
-                            {
-                                //Username not exists -> set username and show leaderboard with the username
-                                usernameErrorText.gameObject.SetActive(false);
-                                setUsernamePanelTrans.gameObject.SetActive(false);
-                                leaderboardPanelTrans.gameObject.SetActive(true);
-                                PlayerPrefs.SetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME, usernameInputField.text);
-                                localUsernameText.text = "N/A. " + PlayerPrefs.GetString(PlayerPrefsKeys.PPK_SAVED_USER_NAME);
-                                ServicesManager.Instance.LeaderboardManager.SetPlayerLeaderboardData();
-
-                                //Create items and set data for local player.
-                                ServicesManager.Instance.LeaderboardManager.GetPlayerLeaderboardData((playerDatas) =>
+                            //Connected to Dreamlo services -> check username exists
+                            string username = usernameInputField.text.Trim();
+                            usernameInputField.text = username;
+                            ServicesManager.Instance.LeaderboardManager.CheckUsernameExists(
+                                username,
+                                (isExists) =>
                                 {
-                                    StartCoroutine(CRCreateLeaderboardItems(playerDatas));
-                                });
-                            }
-                        });
+                                    if (isExists)
+                                    {
+                                        //Username already exists
+                                        usernameErrorText.gameObject.SetActive(true);
+                                        usernameErrorText.text = "The Username Already Exists !";
+                                    }
+                                    else
+                                    {
+                                        //Username not exists -> set username and show leaderboard with the username
+                                        usernameErrorText.gameObject.SetActive(false);
+                                        setUsernamePanelTrans.gameObject.SetActive(false);
+                                        leaderboardPanelTrans.gameObject.SetActive(true);
+                                        PlayerPrefs.SetString(
+                                            PlayerPrefsKeys.PPK_SAVED_USER_NAME,
+                                            usernameInputField.text
+                                        );
+                                        localUsernameText.text =
+                                            "N/A. "
+                                            + PlayerPrefs.GetString(
+                                                PlayerPrefsKeys.PPK_SAVED_USER_NAME
+                                            );
+                                        ServicesManager.Instance.LeaderboardManager.SetPlayerLeaderboardData();
 
+                                        //Create items and set data for local player.
+                                        ServicesManager.Instance.LeaderboardManager.GetPlayerLeaderboardData(
+                                            (playerDatas) =>
+                                            {
+                                                StartCoroutine(
+                                                    CRCreateLeaderboardItems(playerDatas)
+                                                );
+                                            }
+                                        );
+                                    }
+                                }
+                            );
+                        }
+                        else
+                        {
+                            //Not connect to Dreamlo services -> show servicesUnavailablePanel
+                            servicesUnavailablePanelTrans.gameObject.SetActive(true);
+                            setUsernamePanelTrans.gameObject.SetActive(false);
+                            leaderboardPanelTrans.gameObject.SetActive(false);
+                        }
                     }
-                    else
-                    {
-                        //Not connect to Dreamlo services -> show servicesUnavailablePanel
-                        servicesUnavailablePanelTrans.gameObject.SetActive(true);
-                        setUsernamePanelTrans.gameObject.SetActive(false);
-                        leaderboardPanelTrans.gameObject.SetActive(false);
-                    }
-                });
+                );
             }
         }
 
-
         public void OnClickCloseButton()
         {
-            ServicesManager.Instance.SoundManager.PlaySound(ServicesManager.Instance.SoundManager.Button);
+            ServicesManager.Instance.SoundManager.PlaySound(
+                ServicesManager.Instance.SoundManager.Button
+            );
             ViewManager.Instance.OnShowView(ViewType.HOME_VIEW);
         }
     }
