@@ -76,6 +76,13 @@ public class CheckInternet : MonoBehaviour
 
     void FixedUpdate()
     {
+
+    }
+
+
+    public void CheckingNetwork()
+    {
+
         if (internetPlugin.IsWifiConnected() || internetPlugin.IsMobileConnected())
         {
             isWifiConnected = true;

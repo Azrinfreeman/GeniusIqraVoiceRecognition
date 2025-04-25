@@ -203,6 +203,32 @@ MonoBehaviour:
   numQuestion: 0
   numCount: 0
   questionLists:
+  - name: "\u064E\u0628"
+    compare:
+    - ba
+    level: 0
+  - name: "\u064E\u0633"
+    compare:
+    - sa
+    level: 0
+  - name: "\u064F\u062C"
+    compare:
+    - ja
+    - jar
+    level: 0
+  - name: "\u0650\u0644"
+    compare:
+    - li
+    - lee
+    level: 0
+  - name: "\u064E\u0628 \u064E\u0639 \u064E\u062F"
+    compare:
+    - daaba
+    level: 0
+  - name: "\u064E\u062D \u064E\u0641 \u064E\u0638"
+    compare:
+    - hafazo
+    level: 0
   - name: "\u064E\uFEDD\uFE8E\u064E\uFE98\u064E\uFED7"
     compare:
     - kotala
